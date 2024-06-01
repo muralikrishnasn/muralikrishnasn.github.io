@@ -17,8 +17,8 @@ header h1 {
 }
 
 .container {
-    width: 80%;
-    max-width: 1200px; /* Adjusted maximum width */
+    width: 90%;
+    max-width: 1200px;
     margin: auto;
     overflow: hidden;
     padding: 2rem 0;
@@ -28,6 +28,7 @@ header h1 {
     display: flex;
     align-items: center;
     gap: 2rem;
+    flex-wrap: wrap; /* Ensures flexibility on smaller screens */
 }
 
 .profile-image {
@@ -66,6 +67,7 @@ ul li {
     justify-content: space-around;
     padding: 0;
     margin: 0;
+    flex-wrap: wrap; /* Ensures flexibility on smaller screens */
 }
 
 .tabs ul li {
@@ -129,4 +131,23 @@ footer {
     color: #fff;
     text-align: center;
     padding: 1rem 0;
-    marg
+    margin-top: 2rem;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .profile-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .tabs ul li {
+        padding: 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .tabs ul li {
+        padding: 0.25rem;
+    }
+}
