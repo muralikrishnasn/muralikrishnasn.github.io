@@ -1,10 +1,9 @@
 /* =========================================
-   Professional Slate – Site Styles
+   Professional Slate – Chrome-safe Styles
    ========================================= */
 
 /* ---- Design Tokens ---- */
 :root{
-  /* Dark default */
   --bg: #0f1218;            /* page background */
   --bg-elev: #141923;       /* elevated surfaces */
   --card: #171e2b;          /* cards */
@@ -21,7 +20,7 @@
   --maxw: 1100px;
 }
 
-/* Light-mode override for users preferring light */
+/* Light-mode override */
 @media (prefers-color-scheme: light){
   :root{
     --bg: #f7f8fb;
@@ -29,7 +28,7 @@
     --card: #ffffff;
     --text: #0f172a;
     --muted: #556179;
-    --accent: #1e40af;        /* slightly deeper blue in light mode */
+    --accent: #1e40af;
     --accent-2: #0f766e;
     --ring: rgba(30, 64, 175, .45);
     --border: rgba(2, 6, 23, .08);
@@ -37,7 +36,7 @@
   }
 }
 
-/* Respect reduced motion */
+/* Reduced motion */
 @media (prefers-reduced-motion: reduce){
   * { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
 }
@@ -61,7 +60,7 @@ img{ max-width: 100%; display: block; }
 /* Containers */
 .container{ max-width: var(--maxw); margin: 0 auto; padding: 24px 20px; }
 
-/* ---- Header (hero with photo/name/title) ---- */
+/* ---- Header (hero) ---- */
 header.header{
   background: var(--bg-elev);
   border-bottom: 1px solid var(--border);
@@ -109,14 +108,14 @@ header.header{
 }
 
 /* ---- Sticky Tabs ---- */
+/* Chrome-safe: solid background; optional blur only if supported */
 .tabs-wrap{
   position: sticky; top: 0; z-index: 50;
-  background: color-mix(in srgb, var(--bg-elev) 92%, transparent);
-  backdrop-filter: blur(8px);
+  background: rgba(20,25,35,0.95);  /* fallback: no color-mix() */
   border-bottom: 1px solid var(--border);
 }
-@supports not (color-mix(in srgb, black 0%, white 0%)){
-  .tabs-wrap{ background: var(--bg-elev); }
+@supports (backdrop-filter: blur(8px)){
+  .tabs-wrap{ backdrop-filter: blur(8px); }
 }
 
 .tabs{
@@ -247,7 +246,7 @@ footer .container{
 }
 .to-top.show{ display: inline-flex; }
 
-/* ---- Print (tidy references) ---- */
+/* ---- Print ---- */
 @media print{
   .tabs-wrap, .to-top { display: none !important; }
   a[href]:after{ content: " (" attr(href) ")"; font-size: 85%; color: #666; }
