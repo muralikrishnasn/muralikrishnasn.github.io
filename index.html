@@ -9,7 +9,7 @@
   <!-- Typography -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles/styles.css">
   </head>
 
@@ -83,7 +83,56 @@
     <section id="tab-research" class="tab-panel" role="tabpanel" aria-labelledby="tabbtn-research">
       <section class="card">
         <h2>Research Groups</h2>
-        <p>Details about group research projects and activities.</p>
+        <p class="muted">Current funded initiatives spanning Indian language technologies and AI-driven healthcare.</p>
+
+        <div class="project-grid">
+          <article class="project-card">
+            <div class="project-card-header">
+              <span class="project-tag">Principal Investigator, Institute Level</span>
+              <span class="project-funder">MeitY, Govt. of India</span>
+            </div>
+            <h3>Centre of Indian Language Data (COIL-D)</h3>
+            <p>
+              COIL-D is a consortium-mode funded project led by IIT Patna with MIT Manipal and other national partners.
+              The project develops language resources for Human Language Technology, including standards, guidelines,
+              benchmarks, and resources for Machine Translation and NLP tools.
+            </p>
+            <ul class="project-list">
+              <li>MIT Manipal contributes parallel corpora for Dravidian languages: Kannada, Tamil, Malayalam, and Telugu.</li>
+              <li>The broader language-technology ecosystem connects with open multilingual translation resources such as AI4Bharat's IndicTrans2.</li>
+              <li>COIL-D datasets are also visible through the <code>coild-aikosh</code> collection on Hugging Face.</li>
+            </ul>
+            <div class="project-links">
+              <a href="https://coild-bhashini.github.io/" target="_blank" rel="noopener">COIL-D</a>
+              <a href="https://www.manipal.edu/mit/department-faculty/department-list/school-of-computer-engineering.html" target="_blank" rel="noopener">MIT project note</a>
+              <a href="https://huggingface.co/coild-aikosh" target="_blank" rel="noopener">Datasets</a>
+              <a href="https://github.com/AI4Bharat/IndicTrans2" target="_blank" rel="noopener">IndicTrans2</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-card-header">
+              <span class="project-tag">Co-Principal Investigator</span>
+              <span class="project-funder">Ministry of Education, Govt. of India</span>
+            </div>
+            <h3>AI Centre of Excellence in Healthcare at MAHE</h3>
+            <p>
+              The AI Centre of Excellence in Healthcare at MAHE is part of a Government of India-backed national AI-CoE
+              effort. Phase 2 is aligned with TANUH, the Translational AI for Networked Universal Healthcare Foundation
+              hosted at IISc Bengaluru.
+            </p>
+            <ul class="project-list">
+              <li>MAHE works with partners including KMC Manipal, AIIMS Delhi, IIT Delhi, IISc, and IIT Madras.</li>
+              <li>The programme focuses on clinically useful AI tools for healthcare, including deep-learning models for coronary artery disease.</li>
+              <li>TANUH develops point-of-care AI diagnostics and decision-support tools for high-burden non-communicable diseases.</li>
+            </ul>
+            <div class="project-links">
+              <a href="https://www.manipal.edu/mit/department-faculty/department-list/school-of-computer-engineering.html" target="_blank" rel="noopener">MAHE AI-CoE note</a>
+              <a href="https://www.tanuh.ai/about" target="_blank" rel="noopener">TANUH</a>
+              <a href="https://iisc.ac.in/events/ministry-of-education-establishes-ai-centre-of-excellence-for-healthcare-tanuh-at-iisc/" target="_blank" rel="noopener">IISc announcement</a>
+            </div>
+          </article>
+        </div>
       </section>
     </section>
 
@@ -276,7 +325,24 @@
     <section id="tab-ann" class="tab-panel" role="tabpanel" aria-labelledby="tabbtn-ann">
       <section class="card">
         <h2>Announcements</h2>
-        <p>Important announcements and news updates.</p>
+        <div class="announcement-list">
+          <article class="announcement-card">
+            <div>
+              <span class="project-tag">Recruitment</span>
+              <h3>COIL-D Project Recruitment Updates</h3>
+              <p>
+                COIL-D and the AI-NLP-ML Research Group announce language staff opportunities, freelancer engagement,
+                and temporary technical research positions for the project. Candidates can follow the official COIL-D
+                career page and LinkedIn updates for current openings, application links, and deadlines.
+              </p>
+            </div>
+            <div class="project-links">
+              <a href="https://coild-mit.github.io/" target="_blank" rel="noopener">COIL-D MIT</a>
+              <a href="https://coild-bhashini.github.io/#career" target="_blank" rel="noopener">Recruitment</a>
+              <a href="https://www.linkedin.com/in/muralikrishna-sn/" target="_blank" rel="noopener">LinkedIn updates</a>
+            </div>
+          </article>
+        </div>
       </section>
     </section>
   
